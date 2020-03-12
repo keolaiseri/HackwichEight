@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: "Hello World", message: message, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
+        let action = UIAlertAction(title: "New Round", style: .default, handler: nil)
         
         alert.addAction(action)
         
@@ -64,9 +64,11 @@ class ViewController: UIViewController {
             targetValue = Int.random(in: 0...100)
             currentValue = lroundf(slider.value)
         
-        }
+       updateTargetLabel()
     
-    func TargetLabel() {
+    }
+    
+    func updateTargetLabel() {
         
         let str2 = String(targetValue)
         
